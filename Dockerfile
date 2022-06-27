@@ -2,5 +2,5 @@
 FROM openjdk:8
 COPY . /src/java
 WORKDIR /src/java
-RUN ["javac","src/main/webapp/Fibo1.java"]
-ENTRYPOINT ["java","src/main/webapp/Fibo1"]
+RUN ["javac","src/main/webapp/Fibo.java"]
+ENTRYPOINT ["java","src/main/webapp/Fibo"]
