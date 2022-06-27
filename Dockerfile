@@ -1,7 +1,6 @@
-FROM tomcat:8.0-alpine
-
-COPY sample.war /usr/local/tomcat/webapps/sample.war
-
-EXPOSE 8081
-
-CMD ["catalina.sh", "run"]
+# base image
+FROM openjdk:8
+COPY . /src/java
+WORKDIR /src/java
+RUN ["javac","src/main/webapp/Fibo1.java"]
+ENTRYPOINT ["java","src/main/webapp/Fibo1"]
